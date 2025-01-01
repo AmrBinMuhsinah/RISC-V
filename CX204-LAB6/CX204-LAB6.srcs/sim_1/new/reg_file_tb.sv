@@ -107,6 +107,24 @@ reg_file regFile1(
     reg_write=0;
     wdata=32'h0000;
     #10
+    raddr1=5'b11111;
+    raddr2=5'b00000;
+    waddr=5'b00000;
+    reg_write=1;
+    wdata=32'h0ccc;
+    #10
+    raddr1=5'b11111;
+    raddr2=5'b00000;
+    waddr=5'b00000;
+    reg_write=0;
+    wdata=32'h0000;
+    #10
+    raddr1=5'b11111;
+    raddr2=5'b00000;
+    waddr=5'b00000;
+    reg_write=0;
+    wdata=32'h0000;
+    #10
     $finish;
     
     end
