@@ -5,8 +5,7 @@ module alu(
     input logic [31:0]op2,
     input logic [3:0]alu_ctrl,
     output logic [31:0]alu_result,
-    output logic zero,
-    output logic less
+    output logic zero
     );
     
     logic [31:0]uop1; 
@@ -28,7 +27,6 @@ module alu(
             3   :   alu_result= (uop1<uop2)    ? 32'h0001 : 32'h0000; //Set less than unsigned
             default: alu_result=0;
         endcase
-        less = op1<op2  ? 1'b1 : 1'b0;
         zero = alu_result==32'h0000;
     end 
                 
