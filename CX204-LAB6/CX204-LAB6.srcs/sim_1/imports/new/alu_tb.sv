@@ -37,9 +37,16 @@ logic [31:0]op2;
 logic [3:0]alu_ctrl;
 logic [31:0]alu_result;
 logic zero;
+logic less;
 
-
-alu alu1(.op1(op1),.op2(op2),.alu_ctrl(alu_ctrl),.alu_result(alu_result),.zero(zero));
+alu alu1(
+    .op1(op1),
+    .op2(op2),
+    .alu_ctrl(alu_ctrl),
+    .alu_result(alu_result),
+    .zero(zero),
+    .less(less)
+    );
 
 initial begin
     
